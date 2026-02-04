@@ -14,12 +14,12 @@ cmd_ping() {
 
 	for q in {1..200}
 	do
-        	curr="$base$q"
-        	#ping -c 1 $curr &> /dev/null
-		ping -c 1 $curr >> ${logfile}
+        curr="$base$q"
+        ping -c 1 $curr &> /dev/null
+		#ping -c 1 $curr >> ${logfile}
 
 		if [ $? -eq 0 ]; then
-			#ping -c 1 $curr >> ${logfile}
+			ping -c 1 $curr >> ${logfile}
 			echo "Node ${curr} is reachable"
 			found=$((found + 1))
 		else
