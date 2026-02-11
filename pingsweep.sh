@@ -1,12 +1,6 @@
 #!/bin/bash
 # Ping sweep the Lab
 
-# Output: 
-#	Scanned __ nodes 
-#	Found __ active machines 
-#   No response from ___ machines
-#   See pingsweep.log for details 
-
 pingsweep() {
 	# clear previous log before scanning
 	echo > ping.log 
